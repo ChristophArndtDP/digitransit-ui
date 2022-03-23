@@ -2,6 +2,8 @@
    (without this Foundation overrides body */
 $body-font-family: $font-family;
 $body-font-weight: $font-weight-medium;
+$font-weight-bold: $font-weight-medium;
+$font-weight-normal: $font-weight-medium;
 
 /* Base styles */
 @import 'base/zindex';
@@ -10,8 +12,10 @@ $body-font-weight: $font-weight-medium;
 @import 'base/form';
 @import 'base/helper-classes';
 @import 'base/elements';
+@import '~foundation-sites/scss/foundation';
 
-@import '~zurb-foundation-5/scss/foundation/components/grid';
+@import '~foundation-sites/scss/grid/_grid';
+//@import '~zurb-foundation-5/scss/foundation/components/grid'; //54 und 14
 @import 'base/helper-classes-after-foundations';
 
 // Some of these files override sass variables Foundation uses,
@@ -51,7 +55,8 @@ $body-font-weight: $font-weight-medium;
 @import '../app/component/bubble-dialog';
 @import '../app/component/selectmaplayersdialog';
 @import '../app/component/itinerary-profile';
-@import '~zurb-foundation-5/scss/foundation/components/forms';
+@import '~foundation-sites/scss/forms/forms';
+//@import '~zurb-foundation-5/scss/foundation/components/forms';
 @import '../app/component/streetmodeselector';
 @import '../app/component/streetmodeselectorbutton';
 @import '../app/component/streetmodeselectorshimmer';
@@ -68,7 +73,7 @@ $body-font-weight: $font-weight-medium;
 
 /* Modal */
 @import '~foundation-apps/scss/helpers/breakpoints';
-@import '~foundation-apps/scss/components/modal';
+//@import '~foundation-apps/scss/components/modal';
 
 // And these application specific styles use Foundation variables,
 // so they have to be loaded afterwards

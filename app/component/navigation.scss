@@ -1,11 +1,12 @@
-
 @function navbar-icon-color($color) {
-  $background-color-brightness: (red($color)*299)+(green($color)*587)+(blue($color)*114)/1000;
-  $light-color-lightness: round((red(#ffffff)*299)+(green(#ffffff)*587)+(blue(#ffffff)*114)/1000);
+  $background-color-brightness: (red($color) * 299)+ (green($color) * 587)+
+    (blue($color) * 114)/1000;
+  $light-color-lightness: round(
+    (red(#ffffff) * 299)+ (green(#ffffff) * 587)+ (blue(#ffffff) * 114)/1000
+  );
   @if abs($background-color-brightness) < ($light-color-lightness / 3) {
     @return #ffffff;
-  }
-  @else {
+  } @else {
     @return #333333;
   }
 }
@@ -217,13 +218,13 @@ $content-background-color: $background-color;
   position: absolute;
   min-width: 200px;
   background-color: $primary-color;
-  transition: opacity .1s linear;
+  transition: opacity 0.1s linear;
 
   &.open {
-    border-top: 1px solid rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    box-shadow: none;//0 2px 0 0 rgba(0,0,0,.06);
+    box-shadow: none; //0 2px 0 0 rgba(0,0,0,.06);
     top: 50px;
     right: -25px;
     opacity: 1;
@@ -260,7 +261,7 @@ $content-background-color: $background-color;
     }
   }
   .usermenu-list-item:not(:last-child) > a {
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     @include min-width(tablet) {
       border-bottom: none;
     }
@@ -395,7 +396,7 @@ $content-background-color: $background-color;
   }
 
   .menu-section {
-    border-bottom: 1px solid #DDDDDD;
+    border-bottom: 1px solid #dddddd;
     padding-bottom: 15px;
     padding-top: 15px;
     &.main-links {
@@ -597,11 +598,11 @@ section.content {
       }
 
       .scrollable-content-wrapper {
-        display: flex;
+        /*display: flex;
         flex-basis: 0px;
         flex-direction: column;
         flex-grow: 1;
-        flex-shrink: 0;
+        flex-shrink: 0;*/
 
         @media print {
           display: inline;
@@ -654,8 +655,12 @@ section.content {
   }
 
   @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   animation: fadein 1s;
   position: relative;
@@ -770,7 +775,8 @@ section.content {
         color: white;
       }
       .message-bar-container {
-        .react-swipe-container, .single-alert {
+        .react-swipe-container,
+        .single-alert {
           .message-content {
             .message-bar-link {
               color: $white;

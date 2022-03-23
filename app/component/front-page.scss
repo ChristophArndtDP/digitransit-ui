@@ -267,7 +267,9 @@ $heading-color: #858585;
 }
 
 .front-page-map-wrapper {
-  width: calc(100% - 600px); // 600px is from control-panel-container left's width.
+  width: calc(
+    100% - 600px
+  ); // 600px is from control-panel-container left's width.
   display: flex;
   flex: 1;
   left: auto; // Allows shrinking map from left side instead of right.
@@ -285,7 +287,7 @@ $heading-color: #858585;
   .datetimepicker-container {
     margin: 9px 0 9px 0;
     .datetimepicker-bottom-row-open {
-      margin-bottom: 9px
+      margin-bottom: 9px;
     }
   }
 }
@@ -297,8 +299,8 @@ $heading-color: #858585;
   background-color: #ffffff; // // DT-3381: TODO Placeholder values!
   position: absolute;
   height: 100%;
-  width: 600px;  // DT-3381: TODO Placeholder values!
-  min-width: 600px;  // DT-3381: TODO Placeholder values!
+  width: 600px; // DT-3381: TODO Placeholder values!
+  min-width: 600px; // DT-3381: TODO Placeholder values!
   z-index: 20; // DT-3381: TODO Placeholder values!
 }
 
@@ -490,14 +492,14 @@ svg.icon.menu-icon {
     margin-bottom: 11px;
   }
   .scrollable-content-wrapper {
-    overflow-y: auto;
+    /*overflow-y: auto;
     overflow-x: hidden;
     display: flex;
     flex-basis: 0px;
     flex-direction: column;
     flex-grow: 1;
-    flex-shrink: 0;
-    }
+    flex-shrink: 0;*/
+  }
 }
 .front-page.bp-large .toggle-positioning-container {
   bottom: 40px;

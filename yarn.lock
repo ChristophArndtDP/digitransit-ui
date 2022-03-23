@@ -5463,6 +5463,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/json-schema@npm:^7.0.8":
+  version: 7.0.10
+  resolution: "@types/json-schema@npm:7.0.10"
+  checksum: 2559b7afbe7470fef9075f700a9f6e946da99f032ddfbdb332dd7a65050364550cb31817a614806462ce63ba913e407ac62b70c4b5af562d1effa38115792b6a
+  languageName: node
+  linkType: hard
+
 "@types/json5@npm:^0.0.29":
   version: 0.0.29
   resolution: "@types/json5@npm:0.0.29"
@@ -6150,7 +6157,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:^6.1.0, ajv@npm:^6.10.0, ajv@npm:^6.10.2, ajv@npm:^6.12.3, ajv@npm:^6.12.4":
+"ajv@npm:^6.1.0, ajv@npm:^6.10.0, ajv@npm:^6.10.2, ajv@npm:^6.12.3, ajv@npm:^6.12.4, ajv@npm:^6.12.5":
   version: 6.12.6
   resolution: "ajv@npm:6.12.6"
   dependencies:
@@ -10385,6 +10392,7 @@ __metadata:
     found: 0.5.9
     found-relay: 0.8.2
     foundation-apps: 1.2.0
+    foundation-sites: 6.5.3
     git-precommit-checks: 3.0.0
     graphql: 15.5.0
     helmet: 4.1.0
@@ -10460,7 +10468,7 @@ __metadata:
     rollup-plugin-peer-deps-external: 2.2.4
     rollup-plugin-postcss: 4.0.0
     rollup-plugin-terser: 7.0.2
-    sass-loader: 10.0.2
+    sass-loader: 10.2.1
     selenium-webdriver: 4.0.0-alpha.1
     serialize-javascript: 4.0.0
     sinon: 9.0.3
@@ -12908,6 +12916,16 @@ __metadata:
   version: 1.2.0
   resolution: "foundation-apps@npm:1.2.0"
   checksum: c6d5781d4c14134d977a9ce4e523b89967c028a2ff3df54063ec9ebfb6c5380d440f0b931904ac4562f7fa24082b9841377799553941d5c98ca2f7fe0877af9f
+  languageName: node
+  linkType: hard
+
+"foundation-sites@npm:6.5.3":
+  version: 6.5.3
+  resolution: "foundation-sites@npm:6.5.3"
+  peerDependencies:
+    jquery: ">=2.2.0"
+    what-input: ">=4.1.0"
+  checksum: f1f15036c478b5b778805bb6dabac15b5c0e1c33312985ebe4b0674887daa9403ab7dc2c1a81f38b3269338b33ef70b54137d024689cfb7c0d11bb3381cb8597
   languageName: node
   linkType: hard
 
@@ -17085,7 +17103,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"klona@npm:^2.0.3":
+"klona@npm:^2.0.3, klona@npm:^2.0.4":
   version: 2.0.5
   resolution: "klona@npm:2.0.5"
   checksum: 0fa5dada3d91fdd5959094a5f89f37e099d6f7aad95e581be22fbdaaf2a91800ca9f7f10915a6c0eba5dbd2b51697b053b169cad74a99dabc8967f990195fd48
@@ -24043,18 +24061,18 @@ resolve@1.1.7:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:10.0.2":
-  version: 10.0.2
-  resolution: "sass-loader@npm:10.0.2"
+"sass-loader@npm:10.2.1":
+  version: 10.2.1
+  resolution: "sass-loader@npm:10.2.1"
   dependencies:
-    klona: ^2.0.3
+    klona: ^2.0.4
     loader-utils: ^2.0.0
     neo-async: ^2.6.2
-    schema-utils: ^2.7.1
+    schema-utils: ^3.0.0
     semver: ^7.3.2
   peerDependencies:
     fibers: ">= 3.1.0"
-    node-sass: ^4.0.0
+    node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0
     sass: ^1.3.0
     webpack: ^4.36.0 || ^5.0.0
   peerDependenciesMeta:
@@ -24064,7 +24082,7 @@ resolve@1.1.7:
       optional: true
     sass:
       optional: true
-  checksum: 9eec5e84be53db8e46aa1e7f4cc5e48b1e72508159dcc53986a59f14789547e07084793b03638e33d9a94339e2229dca1fb5f1ece5d2e1479af329e28a28ecb7
+  checksum: f94f03e23740467ba5c899e07bcfbbecb53809821e693df5c8be6352f0c0758a7cbe8c0d04e6606215bd1294b92c13724fd5e16eeec1028fc159309a6689bacb
   languageName: node
   linkType: hard
 
@@ -24131,6 +24149,17 @@ resolve@1.1.7:
     ajv: ^6.12.4
     ajv-keywords: ^3.5.2
   checksum: 3851bcc7e44a3f35d3ca96e460c598aa24cec9fe395b196395316a043dc111d25735a9a49b1a115e4b52d5ed0d8bbcfb9fe1bfd077610f192b613e020d3f3ef2
+  languageName: node
+  linkType: hard
+
+"schema-utils@npm:^3.0.0":
+  version: 3.1.1
+  resolution: "schema-utils@npm:3.1.1"
+  dependencies:
+    "@types/json-schema": ^7.0.8
+    ajv: ^6.12.5
+    ajv-keywords: ^3.5.2
+  checksum: c4f4c4c511a07ac7a0be5bf1da60b1756753effc3ff9c1f5153b0238f7e293aa4494466fb436b0a778d63e70e8e6b2cd6ac1d7a1cce176dde6e3f3e3a31d2962
   languageName: node
   linkType: hard
 
