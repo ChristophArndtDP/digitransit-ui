@@ -203,8 +203,7 @@
     "suncalc": "1.8.0",
     "swipe-js-iso": "2.1.5",
     "universal-cookie": "4.0.4",
-    "uuid": "8.3.0",
-    "zurb-foundation-5": "5.4.7"
+    "uuid": "8.3.0"
   },
   "devDependencies": {
     "@axe-core/react": "^4.2.0",
