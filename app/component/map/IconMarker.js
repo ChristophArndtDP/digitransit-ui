@@ -9,11 +9,7 @@ let Marker;
 /* eslint-disable global-require */
 if (isBrowser) {
   L = require('leaflet');
-<<<<<<< HEAD
-  Marker = require('react-leaflet/esm/Marker').Marker;
-=======
   Marker = require('react-leaflet').Marker;
->>>>>>> 1dae6fb42c856a74975b0ef1aa3c5aa6bdbe43b0
 }
 /* eslint-enaable global-require */
 
