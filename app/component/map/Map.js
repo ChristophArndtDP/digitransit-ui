@@ -278,12 +278,12 @@ export default class Map extends React.Component {
           {...naviProps}
           className={`z${this.state.zoom}`}
           keyboard={false}
-          ref={el => {
+          /*ref={el => {
             this.map = el;
             if (this.props.mapRef) {
               this.props.mapRef(el);
             }
-          }}
+          }}*/
           minZoom={config.map.minZoom}
           maxZoom={config.map.maxZoom}
           zoomControl={false}

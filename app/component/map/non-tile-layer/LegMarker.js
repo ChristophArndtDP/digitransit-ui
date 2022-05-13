@@ -35,7 +35,7 @@ class LegMarker extends React.Component {
 
   componentDidMount() {
     const mapInstance = useMap();
-    mapInstance.on('zoomend', this.onMapZoom);
+    mapInstance.on('zoomend', this.onMapZoom); //CA TODO: wie geht zommen mit den neuen Paket
     // this.props.leaflet.map.on('zoomend', this.onMapZoom);
   }
 
@@ -83,9 +83,10 @@ class LegMarker extends React.Component {
     if (!isBrowser) {
       return '';
     }
-
-    const p1 = this.props.leaflet.map.latLngToLayerPoint(this.props.leg.from);
-    const p2 = this.props.leaflet.map.latLngToLayerPoint(this.props.leg.to);
+    //const test = this.props.useMap.latLngToLayerPoint();
+    const p1 = this.props.useMap.latLngToLayerPoint(this.props.leg.from);
+    console.log('Test: ' + this.props.leg.from);
+    const p2 = this.props.useMap.latLngToLayerPoint(this.props.leg.to);
     const distance = p1.distanceTo(p2);
     const minDistanceToShow = 64;
 

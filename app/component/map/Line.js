@@ -8,7 +8,7 @@ let Polyline;
 
 /* eslint-disable global-require */
 if (isBrowser) {
-  Polyline = require('react-leaflet/esm/Polyline').default;
+  Polyline = require('react-leaflet').Polyline; //TODO CA: change to es6 like: import { Polyline } from 'react-leaflet';
 }
 /* eslint-enable global-require */
 
