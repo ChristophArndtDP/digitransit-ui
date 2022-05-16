@@ -27,7 +27,7 @@ class LegMarker extends React.Component {
   };
 
   componentDidMount() {
-    useMapEvent('zoomend', this.onMapZoom);
+    //useMapEvent('zoomend', this.onMapZoom);
     // this.props.leaflet.map.on('zoomend', this.onMapZoom);
   }
 
@@ -38,7 +38,8 @@ class LegMarker extends React.Component {
   };
 
   onMapZoom = () => {
-    this.forceUpdate();
+    //this.forceUpdate(); //FIX
+    //this.setState.distance = p1.distanceTo(p2);
   };
 
   getLegMarker() {
@@ -75,10 +76,11 @@ class LegMarker extends React.Component {
     if (!isBrowser) {
       return '';
     }
-
-    const p1 = useMap().latLngToLayerPoint(this.props.leg.from);
-    const p2 = useMap().latLngToLayerPoint(this.props.leg.to);
-    const distance = p1.distanceTo(p2);
+    //console.log(useMap);
+    //const p1 = useMap().latLngToLayerPoint(this.props.leg.from);
+    //const p2 = useMap().latLngToLayerPoint(this.props.leg.to);
+    //console.log('Test: ' + this.props.leg.from);
+    const distance = '2103'; //p1.distanceTo(p2);
     const minDistanceToShow = 64;
 
     return <div>{distance >= minDistanceToShow && this.getLegMarker()}</div>;

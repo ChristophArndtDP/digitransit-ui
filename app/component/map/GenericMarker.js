@@ -46,7 +46,7 @@ class GenericMarker extends React.Component {
     onClick: () => {},
   };
 
-  state = { zoom: useMap().getZoom() };
+  state = { zoom: 0 };
 
   // eslint-disable-next-line sort-keys
   UNSAFE_componentDidMount() {
