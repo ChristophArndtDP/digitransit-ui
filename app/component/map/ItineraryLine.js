@@ -6,7 +6,8 @@ import { createFragmentContainer, graphql } from 'react-relay';
 import polyUtil from 'polyline-encoded';
 
 import StopMarker from './non-tile-layer/StopMarker';
-import LegMarker from './non-tile-layer/LegMarker';
+import LegMarker from './non-tile-layer/LegMarker.js';
+import TestLegCA from './non-tile-layer/TestLegCA.js';
 import Line from './Line';
 import Icon from '../Icon';
 import CityBikeMarker from './non-tile-layer/CityBikeMarker';
@@ -191,6 +192,7 @@ class ItineraryLine extends React.Component {
                   mode={mode.toLowerCase()}
                   zIndexOffset={300} // Make sure the LegMarker always stays above the StopMarkers
                 />,
+                <TestLegCA key="Testing" />,
               );
             }
 

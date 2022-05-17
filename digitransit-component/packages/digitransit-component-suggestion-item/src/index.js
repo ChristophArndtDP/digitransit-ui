@@ -7,7 +7,7 @@ import Icon from '@digitransit-component/digitransit-component-icon';
 import styles from './helpers/styles.scss';
 
 const BUS_EXPRESS = 702;
-const BUS_LOCAL = 704;
+const BUS_LOCAL = 999704;
 
 const getRouteMode = props => {
   switch (props.type) {
@@ -325,9 +325,11 @@ const SuggestionItem = pure(
                 </div>
                 <div className={styles['suggestion-label']}>
                   {isBikeRentalStation ? cityBikeLabel : label}
-                  {((stopCode && stopCode !== name) ||
-                    (item.properties?.layer === 'bikestation' &&
-                      hasVehicleStationCode(item.properties.id))) && (
+                  {((!isBikeRentalStation && stopCode && stopCode !== name) ||
+                    (isBikeRentalStation &&
+                      hasVehicleStationCode(
+                        stopCode || item.properties.id,
+                      ))) && (
                     <span className={styles['stop-code']}>
                       {stopCode || item.properties.id}
                     </span>
