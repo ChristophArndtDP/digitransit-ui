@@ -25,9 +25,10 @@ import {
 } from '../../../util/path';
 import SelectVehicleContainer from './SelectVehicleContainer';
 
-function TileLayerContainer(props, { getStore, config, router }) {
+function TileLayerContainer(propsIn, { getStore, config, router }) {
   const [selectableTargets, setSelectableTargets] = useState(null);
   const [coords, setCoords] = useState(null);
+  const [props] = useState(propsIn);
 
   const mapInstance = useMap();
   const popupEl = useRef(null);
@@ -248,18 +249,18 @@ function TileLayerContainer(props, { getStore, config, router }) {
     };
   }, []);
 
-  /* TODO componentDidUpdate still needs to be reworked 
-  useEffect(() => {
+  /* TODO componentDidUpdate still needs to be reworked */
+  /*useEffect(() => {
     if (popupContainer != null) {
       popupContainer.openPopup();
-    }
+    } 
     if (!isEqual(prevProps.mapLayers, this.props.mapLayers)) {
       leafletElement.redraw();
     }
     if (!isEqual(prevProps.hilightedStops, this.props.hilightedStops)) {
       leafletElement.redraw();
     }
-  } */
+  });*/
 
   let popup = null;
   let latlng = coords;
